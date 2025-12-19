@@ -1,0 +1,23 @@
+.home-details {
+min-height: calc(100vh - 60px);
+  width: 100%;
+
+  background-image: url("../assets/h1.jpg");
+  background-size:40%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  
+  color: #fff;
+ 
+}
+.todo  {
+  font-size:2rem; 
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+text-align: right; 
+  height: calc(100vh - 60px);  
+  margin-left: 15%;
+}
