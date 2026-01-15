@@ -1,32 +1,94 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   overflow-x: hidden;
-  margin:0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 .navbar {
   width: 100%;
-  height: 60px;
-  padding: 0 16px;
+  height: 64px;
   background-color: rgb(222, 218, 213);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-
 .nav-links {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+
   display: flex;
-  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
 }
 
 .nav-link {
+  background: none;
+  border: none;
+
   text-decoration: none;
-  color: black;
+  color: #111827;
   font-weight: 600;
+  font-size: 14px;
+
   cursor: pointer;
+  position: relative;
+  padding: 6px 4px;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: #4f46e5;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #4f46e5;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+
+  border: 1px solid #dc2626;
+  color: #dc2626;
+  background: transparent;
+
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.logout-btn:active {
+  transform: scale(0.96);
+}
+
+.logout-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
 }

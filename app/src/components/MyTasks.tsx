@@ -39,39 +39,47 @@ const TodoList: React.FC = () => {
       console.error(err);
     }
   };
+return (
+  <div className="todo1-container">
+    <h2 className="page-title">To-do List</h2>
 
-  
-
-  return (
-    <div className="todo-container">
-      {todos.map(todo => (
+    <div className="todo-grid">
+      {todos.map((todo) => (
         <div key={todo._id} className="todo-card">
-          <h3>{todo.title}</h3>
-          <p>{todo.description}</p>
+          
+          <div className="todo-section">
+            <span className="todo-label">Title</span>
+            <div className="todo-header">
+              <h3>{todo.title}</h3>
+            </div>
+          </div>
 
-          <ul className="todo-items">
-            {todo.items.map(item => (
-              <li
-                key={item._id}
-                className={item.completed ? "completed" : ""}
-              >
-                {item.text}
+          <div className="todo-section">
+            <span className="todo-label">Description</span>
+            <p className="todo-description">{todo.description}</p>
+          </div>
 
-               
-              </li>
-            ))}
-          </ul>
+          <div className="todo-section">
+            <span className="todo-label">Tasks</span>
+            <ul className="todo-items">
+              {todo.items.map((item) => (
+                <li key={item._id}>{item.text}</li>
+              ))}
+            </ul>
+          </div>
 
           <button
             className="delete-btn"
             onClick={() => deleteTodo(todo._id)}
           >
-            Delete Todo
+            Delete 
           </button>
         </div>
       ))}
     </div>
-  );
+  </div>
+
+);
 };
 
 export default TodoList;

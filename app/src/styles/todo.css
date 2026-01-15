@@ -3,72 +3,127 @@
   background-image: url("../assets/h2.jpg");
   background-repeat: no-repeat;
   background-position: left center;
+  background-color: white;
   background-size: 35%;
-  padding-left: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  
+  padding-right: 80px;
+}
 
-}.todo-container {
-  width: 420px;        
-  padding: 20px;
+.todo-container {
+  width: 420px;
+  padding: 24px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: bisque;
+border-color: black;
 }
-
 
 .todo-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  margin-top: 15px;
+  color: #111827;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .todo-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .todo-form input {
   padding: 10px 12px;
   font-size: 14px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #d1d5db;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .todo-form input::placeholder {
-  color: #999;
+  color: #9ca3af;
 }
 
 .todo-form input:focus {
   border-color: #4f46e5;
-  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
-.todo-form button {
-  margin-top: 10px;
+.task-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.task-row input {
+  flex: 1;
+}
+
+.add-task-btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-task-btn:hover {
+  background: #4338ca;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.task-list li {
+  background: #f3f4f6;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.todo-form button[type="submit"] {
+  margin-top: 14px;
   padding: 12px;
   font-size: 15px;
   font-weight: 600;
   border-radius: 10px;
   border: none;
   background: #358d78;
-  color: hsl(0, 60%, 6%);
+  color: #062b21;
   cursor: pointer;
 }
 
-.todo-form button:hover {
+.todo-form button[type="submit"]:hover {
   background: #24806c;
 }
 
-.todo-form button:active {
-  transform: scale(0.98);
+.todo-form button[type="submit"]:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
 }
-.add-task-btn{
-    gap:40px; 
-   
+
+.success {
+  margin-top: 10px;
+  text-align: center;
+  color: #16a34a;
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 10px;
+  text-align: center;
+  color: #dc2626;
+  font-size: 14px;
 }
